@@ -7,22 +7,22 @@
         </ion-toolbar>
       </ion-header>
       <ion-content padding>
-          <h1>{{user.githubUser?.name}}</h1>
-          <p>{{user.githubUser?.bio}}</p>
-          <ion-list lines="none">
-            <ion-item (click)="sendMail()">
-              <ion-icon slot="start" name="ios-mail"></ion-icon>
-              <ion-label>me@garygrossgarten.de</ion-label>
-            </ion-item>
-            <ion-item href="https://twitter.com/garygrossgarten">
-              <ion-icon slot="start" name="logo-twitter"></ion-icon>
-              <ion-label>@garygrossgarten</ion-label>
-            </ion-item>
-            <ion-item href="https://github.com/garygrossgarten">
-              <ion-icon slot="start" name="logo-github"></ion-icon>
-              <ion-label>garygrossgarten</ion-label>
-            </ion-item>
-          </ion-list>
+        <h1>{{user.githubUser?.name}}</h1>
+        <p>{{user.githubUser?.bio}}</p>
+        <ion-list lines="none">
+          <ion-item (click)="sendMail()">
+            <ion-icon slot="start" name="ios-mail"></ion-icon>
+            <ion-label>{{user.config?.email}}</ion-label>
+          </ion-item>
+          <ion-item [href]="'https://twitter.com/' + user.config?.twitter">
+            <ion-icon slot="start" name="logo-twitter"></ion-icon>
+            <ion-label>@{{user.config?.twitter}}</ion-label>
+          </ion-item>
+          <ion-item [href]="'https://github.com/' + user.config?.github">
+            <ion-icon slot="start" name="logo-github"></ion-icon>
+            <ion-label>{{user.config?.github}}</ion-label>
+          </ion-item>
+        </ion-list>
 
         <fiv-router-item [shape]="'dot'" [position]="'left'" [pageUrl]="'/resume'">
           <fiv-ripple [hover]="true" (click)="menu.close()">
@@ -30,12 +30,13 @@
               <ion-label>Résumé</ion-label>
             </ion-item>
           </fiv-ripple>
-         </fiv-router-item> <fiv-router-item [shape]="'dot'" [position]="'left'" [pageUrl]="'/projects'">
-           <fiv-ripple [hover]="true" (click)="menu.close()">
-              <ion-item lines="none">
-                  <ion-label>Projects</ion-label>
-                </ion-item>
-           </fiv-ripple>
+        </fiv-router-item>
+        <fiv-router-item [shape]="'dot'" [position]="'left'" [pageUrl]="'/projects'">
+          <fiv-ripple [hover]="true" (click)="menu.close()">
+            <ion-item lines="none">
+              <ion-label>Projects</ion-label>
+            </ion-item>
+          </fiv-ripple>
         </fiv-router-item>
 
       </ion-content>

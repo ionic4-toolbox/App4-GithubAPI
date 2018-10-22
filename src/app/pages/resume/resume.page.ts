@@ -15,7 +15,7 @@ export class ResumePage implements OnInit {
   }
 
   sendMail() {
-    window.open('mailto:me@garygrossgarten.de');
+    window.open(`mailto:${this.user.config.email}`);
   }
 
   stepperClick(index) {

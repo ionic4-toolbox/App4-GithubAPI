@@ -24,15 +24,15 @@
                 <ion-list lines="none">
                   <ion-item (click)="sendMail()">
                     <ion-icon slot="start" name="ios-mail"></ion-icon>
-                    <ion-label>me@garygrossgarten.de</ion-label>
+                    <ion-label>{{user.config?.email}}</ion-label>
                   </ion-item>
-                  <ion-item href="https://twitter.com/garygrossgarten">
+                  <ion-item [href]="'https://twitter.com/ + user.config?.twitter'">
                     <ion-icon slot="start" name="logo-twitter"></ion-icon>
-                    <ion-label>@garygrossgarten</ion-label>
+                    <ion-label>@{{user.config?.twitter}}</ion-label>
                   </ion-item>
-                  <ion-item href="https://github.com/garygrossgarten">
+                  <ion-item [href]="'https://github.com/' + user.config?.github">
                     <ion-icon slot="start" name="logo-github"></ion-icon>
-                    <ion-label>garygrossgarten</ion-label>
+                    <ion-label>{{user.config?.github}}</ion-label>
                   </ion-item>
                 </ion-list>
               </ion-col>
@@ -61,20 +61,14 @@
       <ion-card mode="ios">
         <ion-card-content>
           <fiv-stepper #stepper (fivClick)="stepper.open($event)">
-            <fiv-step [open]="false" [icon]="'md-laptop'" [title]="'Computer Science & Economics'" [subtitle]="'Bachelor of Science in Sankt Augustin, Germany and Toronto, Canada'">
+            <fiv-step *ngFor="let ed of user.config?.resume.education" [open]="false" [icon]="ed.icon" [title]="ed.topic"
+              [subtitle]="ed.description">
               <ion-list lines="none">
-                  <ion-item>
-                      <ion-label>2013-2016</ion-label>
-                    </ion-item>
+                <ion-item>
+                  <ion-label>{{ed.from}}-{{ed.to}}</ion-label>
+                </ion-item>
               </ion-list>
-              
-            </fiv-step>
-            <fiv-step [open]="false" [icon]="'md-business'" [title]="'Business Economics'" [subtitle]="'Bachelor of Science in Koblenz, Germany'">
-                <ion-list lines="none">
-                    <ion-item>
-                        <ion-label>2010-2013</ion-label>
-                      </ion-item>
-                </ion-list>
+
             </fiv-step>
           </fiv-stepper>
         </ion-card-content>

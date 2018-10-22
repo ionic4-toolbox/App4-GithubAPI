@@ -32,6 +32,6 @@ export class AppComponent {
   }
 
   sendMail() {
-    window.open('mailto:me@garygrossgarten.de');
+    window.open(`mailto:${this.user.config.email}`);
   }
 }
