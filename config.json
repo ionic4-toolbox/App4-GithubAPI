@@ -1,0 +1,13 @@
+{
+    "github": "garygrossgarten",
+    "twitter": "garygrossgarten",
+    "resume": {
+        "experience": [
+
+        ],
+        "education": [
+            {"icon" : "md-laptop", "topic": "Computer Science & Economics", "description": "Bachelor of Science in Sankt Augustin, Germany and Toronto, Canada", "from": "2013", "to": "2016"},
+            {"icon" : "md-business", "topic": "Business Economics", "description": "Bachelor of Science in Koblenz, Germany", "from": "2010", "to": "2013"}
+        ]
+    }
+}
