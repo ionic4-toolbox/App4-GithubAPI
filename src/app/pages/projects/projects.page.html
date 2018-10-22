@@ -27,7 +27,7 @@
   </div>
   
   <ion-grid fixed>
-    <ion-row>
+    <ion-row (@listAnimation.done)="done($event)" [@listAnimation]="user.repos.length">
       <ion-col [sizeXl]="6" [sizeLg]="6" [sizeMd]="6" [sizeSm]="12" [sizeXs]="12" *ngFor="let project of user.repos">
         <ion-card mode="ios">
           <ion-card-header>

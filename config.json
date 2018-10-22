@@ -10,5 +10,6 @@
             {"icon" : "md-laptop", "topic": "Computer Science & Economics", "description": "Bachelor of Science in Sankt Augustin, Germany and Toronto, Canada", "from": "2013", "to": "2016"},
             {"icon" : "md-business", "topic": "Business Economics", "description": "Bachelor of Science in Koblenz, Germany", "from": "2010", "to": "2013"}
         ]
-    }
+    },
+    "introduction": "https://raw.githubusercontent.com/garygrossgarten/personal-website/master/introduction.md"
 }

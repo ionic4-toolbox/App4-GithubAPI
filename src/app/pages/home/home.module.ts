@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
 import { FivethreeCoreModule } from '@fivethree/core';
+import { MarkdownModule } from 'ngx-markdown';
 
 @NgModule({
   imports: [
@@ -18,7 +19,8 @@ import { FivethreeCoreModule } from '@fivethree/core';
         component: HomePage
       }
     ]),
-    FivethreeCoreModule
+    FivethreeCoreModule,
+    MarkdownModule.forChild()
   ],
   declarations: [HomePage]
 })

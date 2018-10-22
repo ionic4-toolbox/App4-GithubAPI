@@ -228,6 +228,7 @@ export interface Config {
   twitter: string;
   resume: Resume;
   email: string;
+  introduction: string;
 }
 
 export interface Resume {
