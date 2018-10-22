@@ -1,3 +1,50 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-split-pane>
+    <ion-menu menuId="gg" side="start" type="overlay">
+      <ion-header>
+        <ion-toolbar color="translucent">
+          <img href="" [src]="user.githubUser?.avatar_url">
+          <ion-title>{{user.githubUser?.name}}</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        
+        <p padding>
+          {{user.githubUser?.bio}}
+        </p>
+
+        <fiv-router-item [shape]="'dot'" [position]="'left'" [pageUrl]="'/resume'">
+          <fiv-ripple>
+            <ion-item lines="none">
+              <ion-label>Résumé</ion-label>
+            </ion-item>
+          </fiv-ripple>
+         </fiv-router-item> <fiv-router-item [shape]="'dot'" [position]="'left'" [pageUrl]="'/projects'">
+           <fiv-ripple>
+              <ion-item lines="none">
+                  <ion-label>Projects</ion-label>
+                </ion-item>
+           </fiv-ripple>
+        </fiv-router-item>
+
+      </ion-content>
+      <ion-footer>
+        <ion-toolbar color="translucent">
+          <ion-buttons slot="start">
+            <ion-button href="https://github.com/garygrossgarten">
+              <ion-icon slot="icon-only" name="logo-github"></ion-icon>
+            </ion-button>
+            <ion-button href="https://twitter.com/garygrossgarten">
+              <ion-icon slot="icon-only" name="logo-twitter"></ion-icon>
+            </ion-button>
+            <ion-button (click)="sendMail()">
+              <ion-icon slot="start" name="mail"></ion-icon>
+              send me an email
+            </ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-footer>
+    </ion-menu>
+    <ion-router-outlet main></ion-router-outlet>
+  </ion-split-pane>
 </ion-app>

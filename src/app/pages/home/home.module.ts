@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
+import { FivethreeCoreModule } from '@fivethree/core';
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import { HomePage } from './home.page';
         path: '',
         component: HomePage
       }
-    ])
+    ]),
+    FivethreeCoreModule
   ],
   declarations: [HomePage]
 })

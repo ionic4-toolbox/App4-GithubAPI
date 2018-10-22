@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar color="translucent">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref=""></ion-back-button>
+      <ion-title>Projects</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="orgs">
+      <ion-label>Organizations</ion-label>
+      <div>
+        <ion-chip>
+          <ion-avatar>
+            <img [src]="user.githubUser?.avatar_url">
+          </ion-avatar>
+          <ion-label>{{user.githubUser?.login}}</ion-label>
+        </ion-chip>
+        <ion-chip *ngFor="let org of user.orgs">
+          <ion-avatar>
+            <img [src]="org.avatar_url">
+          </ion-avatar>
+          <ion-label>{{org.login}}</ion-label>
+        </ion-chip>
+      </div>
+  </div>
+  
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col [sizeXl]="6" [sizeLg]="6" [sizeMd]="6" [sizeSm]="12" [sizeXs]="12" *ngFor="let project of user.repos">
+        <ion-card mode="ios">
+          <ion-card-header>
+            <ion-card-subtitle>{{project.full_name}}</ion-card-subtitle>
+            <ion-card-title>{{project.name}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>{{project.description}}</p>
+          </ion-card-content>
+          <ion-footer>
+            <ion-toolbar color="translucent">
+              <ion-chip>
+                <ion-label [style.color]="'#' + intToRGB(hashCode(project.language))">{{project.language}}</ion-label>
+              </ion-chip>
+              <ion-buttons slot="end">
+                <ion-button (click)="seeOnGithub(project.html_url)">
+                  <ion-icon slot="start" name="logo_github"></ion-icon>
+                  See on Github
+                </ion-button>
+              </ion-buttons>
+            </ion-toolbar>
+          </ion-footer>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+
+</ion-content>
