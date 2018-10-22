@@ -2,12 +2,12 @@
 
 ---
 
-> #### Résume
-> #####  Bonn &emsp; [www.garygrossgarten.de][homepage] &emsp; [@garygrossgarten][twitter] ![twit][]
-> `angular ionic node rxjs`
+#### Gary Großgarten
+### [www.garygrossgarten.de][homepage] &emsp; [@garygrossgarten][twitter] ![twit][]
+`angular ionic node rxjs`
 
 ---
-> **"** Software Developer && Freelancer based in Bonn, Germany.
+**"** Software Developer && Freelancer based in Bonn, Germany.**"**
 
 
 ---
@@ -17,7 +17,6 @@
 ---
 ## Education
 #### Bachelor of Science in Computer Science &emsp; <small>*2013 - 2016*</small>
-`Java and several web technologies`
 > majored in business application systems
 
 ---
