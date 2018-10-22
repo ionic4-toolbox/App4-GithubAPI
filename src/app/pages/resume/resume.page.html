@@ -3,9 +3,18 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref=""></ion-back-button>
     </ion-buttons>
+    <ion-title>Résumé</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col [size]="12">
+        <markdown [src]="'https://raw.githubusercontent.com/garygrossgarten/personal-website/master/resume.md'"></markdown>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
 </ion-content>
