@@ -1,30 +1,7 @@
-# ![avatar][]
+# Gary Großgarten
 
----
+Gary Großgarten is a software developer / freelancer based in Bonn, Germany.
+In his free time Gary is digging deep developing open source projects with his friends from fivethree-team.
 
-#### Gary Großgarten
-### [www.garygrossgarten.de][homepage] &emsp; [@garygrossgarten][twitter] ![twit][]
-`angular ionic node rxjs`
-
----
-**"** Software Developer && Freelancer based in Bonn, Germany.**"**
-
-
----
-## Experience
-#### Software Developer & Freelancer &emsp; <small>*2016 - current*</small>
-
----
-## Education
-#### Bachelor of Science in Computer Science &emsp; <small>*2013 - 2016*</small>
-> majored in business application systems
-
----
-#### Bachelor of Science Economics &emsp; <small>*2010 - 2013*</small>
-> Business Administration, particularly interested in business informatics
-
----
-[avatar]: https://avatars1.githubusercontent.com/u/8986373?s=460&v=4
-[homepage]: https://www.garygrossgarten.de
-[twitter]: https://twitter.com/garygrossgarten
-[twit]: http://cdn-careers.sstatic.net/careers/Img/icon-twitter.png?v=b1bd58ad2034
+I’m currently unavailable for work, but you can take a look at my résumé anyway.
+Send me an <a href="mailto:gary@fivethree.io">email</a> if you're looking for <a href="https://www.fivethree.io">development resources</a> in upcoming projects.
