@@ -9,12 +9,81 @@
 
 <ion-content padding>
 
-  <ion-grid fixed>
-    <ion-row>
-      <ion-col [size]="12">
-        <markdown [src]="'https://raw.githubusercontent.com/garygrossgarten/personal-website/master/resume.md'"></markdown>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+  <fiv-stepper (fivClick)="stepperClick($event)">
+    <fiv-step [open]="true" [icon]="'md-contact'" [title]="'About me'" [subtitle]="user.githubUser?.name">
+      <ion-card mode="ios">
+        <ion-card-content>
+          <ion-grid fixed>
+            <ion-row>
+              <ion-col [sizeXs]="12" [sizeSm]="12" [sizeMd]="4" [sizeLg]="4" [sizeXl]="2">
+                <img id="resume-image" [src]="user.githubUser?.avatar_url">
+              </ion-col>
+              <ion-col [sizeXs]="12" [sizeSm]="12" [sizeMd]="8" [sizeLg]="8" [sizeXl]="10">
+                <h1>{{user.githubUser?.name}}</h1>
+                <p>{{user.githubUser?.bio}}</p>
+                <ion-list lines="none">
+                  <ion-item (click)="sendMail()">
+                    <ion-icon slot="start" name="ios-mail"></ion-icon>
+                    <ion-label>me@garygrossgarten.de</ion-label>
+                  </ion-item>
+                  <ion-item href="https://twitter.com/garygrossgarten">
+                    <ion-icon slot="start" name="logo-twitter"></ion-icon>
+                    <ion-label>@garygrossgarten</ion-label>
+                  </ion-item>
+                  <ion-item href="https://github.com/garygrossgarten">
+                    <ion-icon slot="start" name="logo-github"></ion-icon>
+                    <ion-label>garygrossgarten</ion-label>
+                  </ion-item>
+                </ion-list>
+              </ion-col>
+
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+      </ion-card>
+    </fiv-step>
+    <fiv-step [open]="true" [icon]="'md-code'" [title]="'Experience'">
+      <ion-card mode="ios">
+        <ion-card-content>
+          <ion-footer>
+            <ion-toolbar color="translucent">
+              <ion-buttons slot="end">
+                <ion-button [href]="'projects'">
+                  see more
+                </ion-button>
+              </ion-buttons>
+            </ion-toolbar>
+          </ion-footer>
+        </ion-card-content>
+      </ion-card>
+    </fiv-step>
+    <fiv-step [open]="true" [icon]="'md-school'" [title]="'Education'">
+      <ion-card mode="ios">
+        <ion-card-content>
+          <fiv-stepper #stepper (fivClick)="stepper.open($event)">
+            <fiv-step [open]="false" [icon]="'md-laptop'" [title]="'Computer Science & Economics'" [subtitle]="'Bachelor of Science in Sankt Augustin, Germany and Toronto, Canada'">
+              <ion-list lines="none">
+                  <ion-item>
+                      <ion-label>2013-2016</ion-label>
+                    </ion-item>
+              </ion-list>
+              
+            </fiv-step>
+            <fiv-step [open]="false" [icon]="'md-business'" [title]="'Business Economics'" [subtitle]="'Bachelor of Science in Koblenz, Germany'">
+                <ion-list lines="none">
+                    <ion-item>
+                        <ion-label>2010-2013</ion-label>
+                      </ion-item>
+                </ion-list>
+            </fiv-step>
+          </fiv-stepper>
+        </ion-card-content>
+      </ion-card>
+    </fiv-step>
+    <fiv-step [open]="false" [icon]="'help-circle-outline'" [title]="'If you want to get in touch, send me an email!'">
+
+    </fiv-step>
+  </fiv-stepper>
+
 
 </ion-content>

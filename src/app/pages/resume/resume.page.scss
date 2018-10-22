@@ -1,3 +1,13 @@
-ion-col {
-    margin: 14px 20px;
+fiv-stepper {
+    --fiv-color-circle: var(--ion-color-light);
+    --fiv-color-circle-color: #000;
+}
+
+#resume-image {
+    width: 124px;
+    border-radius: 12px;
+}
+
+ion-list.list .item:last-child {
+    --border-width: 0;
 }
