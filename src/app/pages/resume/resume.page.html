@@ -11,7 +11,7 @@
 
   <fiv-stepper (fivClick)="stepperClick($event)">
     <fiv-step [open]="true" [icon]="'md-contact'" [title]="'About me'" [subtitle]="user.githubUser?.name">
-      <ion-card mode="ios">
+      <ion-card mode="ios" [@about]>
         <ion-card-content>
           <ion-grid fixed>
             <ion-row>
@@ -43,7 +43,7 @@
       </ion-card>
     </fiv-step>
     <fiv-step [open]="true" [icon]="'md-code'" [title]="'Experience'">
-      <ion-card mode="ios">
+      <ion-card mode="ios" [@exp]>
         <ion-card-content>
           <ion-footer>
             <ion-toolbar color="translucent">
@@ -58,7 +58,7 @@
       </ion-card>
     </fiv-step>
     <fiv-step [open]="true" [icon]="'md-school'" [title]="'Education'">
-      <ion-card mode="ios">
+      <ion-card mode="ios" [@ed]>
         <ion-card-content>
           <fiv-stepper #stepper (fivClick)="stepper.open($event)">
             <fiv-step *ngFor="let ed of user.config?.resume.education" [open]="false" [icon]="ed.icon" [title]="ed.topic"

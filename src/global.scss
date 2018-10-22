@@ -26,3 +26,9 @@ ion-menu {
     margin-left: 16px;
     margin-top: 16px;
 }
+
+ion-menu{
+    ion-content{
+        // --background: var(--ion-color-light);
+    }
+}
