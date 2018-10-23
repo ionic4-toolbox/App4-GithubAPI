@@ -1,8 +1,8 @@
 # Impressum
 
 ## Angaben gemäß § 5 TMG:
-Gary Großgarten
-Pariser Str. 14
+Gary Großgarten<br>
+Pariser Str. 14<br>
 53117 Bonn
 
 ## Kontakt:

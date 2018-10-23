@@ -43,9 +43,11 @@
       <ion-footer>
         <ion-toolbar color="translucent">
           <ion-buttons slot="start">
-            <ion-button href="impressum">
-              impressum
-            </ion-button>
+            <fiv-ripple (click)="menu.close()">
+              <ion-button href="impressum">
+                imprint
+              </ion-button>
+            </fiv-ripple>
           </ion-buttons>
         </ion-toolbar>
       </ion-footer>
