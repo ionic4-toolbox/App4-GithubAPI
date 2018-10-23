@@ -1,5 +1,10 @@
 {
     "github": "garygrossgarten",
+    "pinnedProjects": [
+        "https://github.com/garygrossgarten/personal-website",
+        "https://github.com/fivethree-team/fivethree",
+        "https://github.com/fivethree-team/fivethree-fastlane-ionic"
+    ],
     "contact": [
         {
             "icon": "ios-mail",
@@ -11,7 +16,6 @@
             "username": "@garygrossgarten",
             "link": "twitter.com/garygrossgarten"
         }
-        
     ],
     "resume": {
         "about": "https://raw.githubusercontent.com/garygrossgarten/personal-website/master/about.md",
