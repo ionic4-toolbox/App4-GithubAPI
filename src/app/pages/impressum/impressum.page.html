@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Imprint</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-grid fixed>
+        <ion-row>
+          <ion-col [sizeXl]="2" [sizeLg]="2" [sizeMd]="2" [sizeSm]="1" [sizeXs]="1"></ion-col>
+          <ion-col [sizeXl]="8" [sizeLg]="8" [sizeMd]="8" [sizeSm]="10" [sizeXs]="10">
+            <markdown [src]="user.config?.imprint"></markdown>
+    
+          </ion-col>
+          <ion-col [sizeXl]="2" [sizeLg]="2" [sizeMd]="2" [sizeSm]="1" [sizeXs]="1"></ion-col>
+        </ion-row>
+      </ion-grid>
+
+</ion-content>

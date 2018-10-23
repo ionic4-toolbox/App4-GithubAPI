@@ -229,6 +229,7 @@ export interface Config {
   resume: Resume;
   email: string;
   introduction: string;
+  imprint: string;
 }
 
 export interface Resume {
