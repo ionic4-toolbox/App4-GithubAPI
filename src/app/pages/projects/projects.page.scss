@@ -2,18 +2,25 @@ ion-card {
     margin: 14px 20px;
 }
 
-ion-row:first-child {
+ion-row {
     margin-left: 24px;
 }
 
-.orgs{
-    ion-label:first-child{
+.orgs {
+    ion-label:first-child {
         padding-left: 42px;
     }
-    ion-chip{
+    ion-chip {
         margin-right: 4px;
     }
-    div{
+    ion-chip.selected {
+        --background: var(--ion-color-primary);
+    }
+    div {
         padding-left: 42px;
     }
+}
+
+ion-item-divider {
+    border: 0;
 }

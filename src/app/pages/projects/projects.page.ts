@@ -8,12 +8,7 @@ import { trigger, transition, stagger, animate, style, query } from '@angular/an
   styleUrls: ['./projects.page.scss'],
   animations: [
     trigger('listAnimation', [
-      transition('* => *', [ // each time the binding value changes
-        query(':leave', [
-          stagger(100, [
-            animate('125ms', style({ opacity: 0 }))
-          ])
-        ], { optional: true }),
+      transition('* => *', [
         query(':enter', [
           style({ opacity: 0 }),
           stagger(100, [
@@ -47,9 +42,6 @@ export class ProjectsPage implements OnInit {
     const c = (i & 0x00FFFFFF)
       .toString(16)
       .toUpperCase();
-
-    console.log('00000'.substring(0, 6 - c.length) + c);
-
     return '00000'.substring(0, 6 - c.length) + c;
   }
 
@@ -58,6 +50,13 @@ export class ProjectsPage implements OnInit {
   }
 
   done(e) {
-    console.log(e);
+  }
+
+  select(login: string) {
+    if (this.selectedLogin === login) {
+      this.selectedLogin = null;
+    } else {
+      this.selectedLogin = login;
+    }
   }
 }
