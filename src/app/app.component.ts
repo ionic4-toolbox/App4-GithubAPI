@@ -31,7 +31,7 @@ export class AppComponent {
     this.user.setup();
   }
 
-  sendMail() {
-    window.open(`mailto:${this.user.config.email}`);
+  open(url: string) {
+    window.open(url, '_blank');
   }
 }

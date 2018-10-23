@@ -13,12 +13,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MarkdownModule } from 'ngx-markdown';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [BrowserModule, BrowserAnimationsModule, IonicModule.forRoot({mode: 'md'}),
-   AppRoutingModule, FivethreeCoreModule, HttpClientModule, MarkdownModule.forRoot({ loader: HttpClient }),
+   AppRoutingModule, FivethreeCoreModule, HttpClientModule, MarkdownModule.forRoot({ loader: HttpClient }), ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [
     StatusBar,

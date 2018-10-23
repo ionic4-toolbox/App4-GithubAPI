@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { UserDataService } from '../../user-data.service';
 import { trigger, transition, style, animate } from '@angular/animations';
 
@@ -35,13 +35,13 @@ export class ResumePage implements OnInit {
   ngOnInit() {
   }
 
-  sendMail() {
-    window.open(`mailto:${this.user.config.email}`);
+  open(url) {
+    window.open(url, '_blank');
   }
 
   stepperClick(index) {
     switch (index) {
-      case 3: this.sendMail(); break;
+      case 3: this.open(this.user.config.contact[0].link); break;
     }
   }
 }

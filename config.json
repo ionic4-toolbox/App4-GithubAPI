@@ -1,14 +1,47 @@
 {
     "github": "garygrossgarten",
-    "twitter": "garygrossgarten",
-    "email": "gary@fivethree.io",
+    "contact": [
+        {
+            "icon": "ios-mail",
+            "username": "gary@fivethree.io",
+            "link": "mailto:gary@fivethree.io"
+        },
+        {
+            "icon": "logo-twitter",
+            "username": "@garygrossgarten",
+            "link": "twitter.com/garygrossgarten"
+        }
+        
+    ],
     "resume": {
+        "about": "https://raw.githubusercontent.com/garygrossgarten/personal-website/master/about.md",
         "experience": [
-
+            {
+                "icon": "md-rocket",
+                "topic": "Freelancer & Software Developer",
+                "description": "no description yet",
+                "from": "2016",
+                "to": "today",
+                "md": "https://raw.githubusercontent.com/garygrossgarten/personal-website/master/exp1.md"
+            }
         ],
         "education": [
-            {"icon" : "md-laptop", "topic": "Computer Science & Economics", "description": "Bachelor of Science in Sankt Augustin, Germany and Toronto, Canada", "from": "2013", "to": "2016"},
-            {"icon" : "md-business", "topic": "Business Economics", "description": "Bachelor of Science in Koblenz, Germany", "from": "2010", "to": "2013"}
+            {
+                "icon": "md-laptop",
+                "topic": "Computer Science & Economics",
+                "description": "Bachelor of Science in Sankt Augustin, Germany and Toronto, Canada",
+                "from": "2013",
+                "to": "2016",
+                "md": "https://raw.githubusercontent.com/garygrossgarten/personal-website/master/ed1.md"
+            },
+            {
+                "icon": "md-business",
+                "topic": "Business Economics",
+                "description": "Bachelor of Science in Koblenz, Germany",
+                "from": "2010",
+                "to": "2013",
+                "md": "https://raw.githubusercontent.com/garygrossgarten/personal-website/master/ed2.md"
+            }
         ]
     },
     "introduction": "https://raw.githubusercontent.com/garygrossgarten/personal-website/master/introduction.md",
