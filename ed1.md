@@ -1,0 +1,1 @@
+md-content for ed1
