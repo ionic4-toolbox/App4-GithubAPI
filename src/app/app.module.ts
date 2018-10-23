@@ -19,9 +19,14 @@ import { environment } from '../environments/environment';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, BrowserAnimationsModule, IonicModule.forRoot({mode: 'md'}),
-   AppRoutingModule, FivethreeCoreModule, HttpClientModule, MarkdownModule.forRoot({ loader: HttpClient }), ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
-  ],
+  imports: [BrowserModule,
+    BrowserAnimationsModule,
+    IonicModule.forRoot({ mode: 'md' }),
+    AppRoutingModule,
+    FivethreeCoreModule,
+    HttpClientModule,
+    MarkdownModule.forRoot({ loader: HttpClient }),
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })],
   providers: [
     StatusBar,
     SplashScreen,

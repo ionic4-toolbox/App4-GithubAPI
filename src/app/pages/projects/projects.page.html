@@ -11,24 +11,27 @@
   <div class="orgs">
       <ion-label>Organizations</ion-label>
       <div>
-        <ion-chip>
+        <ion-chip (click)="selectedLogin=user.githubUser?.login">
           <ion-avatar>
             <img [src]="user.githubUser?.avatar_url">
           </ion-avatar>
           <ion-label>{{user.githubUser?.login}}</ion-label>
         </ion-chip>
-        <ion-chip *ngFor="let org of user.orgs">
+        <ion-chip *ngFor="let org of user.orgs" (click)="selectedLogin=org.login">
           <ion-avatar>
             <img [src]="org.avatar_url">
           </ion-avatar>
           <ion-label>{{org.login}}</ion-label>
+        </ion-chip>
+        <ion-chip *ngIf="selectedLogin" (click)="selectedLogin=''">
+          <ion-icon name="close" slot="icon-only"></ion-icon>
         </ion-chip>
       </div>
   </div>
   
   <ion-grid fixed>
     <ion-row (@listAnimation.done)="done($event)" [@listAnimation]="user.repos.length">
-      <ion-col [sizeXl]="6" [sizeLg]="6" [sizeMd]="6" [sizeSm]="12" [sizeXs]="12" *ngFor="let project of user.repos">
+      <ion-col [sizeXl]="6" [sizeLg]="6" [sizeMd]="6" [sizeSm]="12" [sizeXs]="12" *ngFor="let project of user.repos | projectFilter: selectedLogin ">
         <ion-card mode="ios">
           <ion-card-header>
             <ion-card-subtitle>{{project.full_name}}</ion-card-subtitle>
