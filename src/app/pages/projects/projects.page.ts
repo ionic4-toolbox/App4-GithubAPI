@@ -26,6 +26,8 @@ import { trigger, transition, stagger, animate, style, query } from '@angular/an
 })
 export class ProjectsPage implements OnInit {
 
+  selectedLogin: string;
+
   constructor(public user: UserDataService) { }
 
   ngOnInit() {

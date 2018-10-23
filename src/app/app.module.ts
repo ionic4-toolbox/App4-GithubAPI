@@ -17,8 +17,14 @@ import { MarkdownModule } from 'ngx-markdown';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, BrowserAnimationsModule, IonicModule.forRoot({mode: 'md'}),
-   AppRoutingModule, FivethreeCoreModule, HttpClientModule, MarkdownModule.forRoot({ loader: HttpClient }),
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    IonicModule.forRoot({ mode: 'md' }),
+    AppRoutingModule,
+    FivethreeCoreModule,
+    HttpClientModule,
+    MarkdownModule.forRoot({ loader: HttpClient })
   ],
   providers: [
     StatusBar,
