@@ -1,3 +1,4 @@
+import { SeoService } from './../../seo.service';
 import { UserDataService } from './../../user-data.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ImpressumPage implements OnInit {
 
-  constructor(public user: UserDataService) { }
+  constructor(public user: UserDataService, private seo: SeoService) { }
 
   ngOnInit() {
+    this.seo.generateTags({
+      title: 'Imprint',
+      description: 'Imprint for garygrossgarten.de',
+      slug: 'imprint'
+    });
+    this.seo.setTitle('Gary Großgarten - Impressum');
   }
-
 }

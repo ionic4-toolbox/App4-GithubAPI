@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MarkdownModule } from 'ngx-markdown';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { SeoService } from './seo.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -31,7 +32,8 @@ import { environment } from '../environments/environment';
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    UserDataService
+    UserDataService,
+    SeoService
   ],
   bootstrap: [AppComponent]
 })

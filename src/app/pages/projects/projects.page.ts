@@ -1,3 +1,4 @@
+import { SeoService } from './../../seo.service';
 import { Component, OnInit } from '@angular/core';
 import { UserDataService } from '../../user-data.service';
 import { trigger, transition, stagger, animate, style, query } from '@angular/animations';
@@ -23,9 +24,15 @@ export class ProjectsPage implements OnInit {
 
   selectedLogin: string;
 
-  constructor(public user: UserDataService) { }
+  constructor(public user: UserDataService, public seo: SeoService) { }
 
   ngOnInit() {
+    this.seo.generateTags({
+      title: 'Projects',
+      description: 'An overview over recent open source projects I\'m working on in my free time.',
+      slug: 'projects'
+    });
+    this.seo.setTitle('Gary Großgarten - Projects');
   }
 
   hashCode(str) {

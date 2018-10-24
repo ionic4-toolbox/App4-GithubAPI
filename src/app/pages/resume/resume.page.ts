@@ -1,3 +1,4 @@
+import { SeoService } from './../../seo.service';
 import { Component, OnInit } from '@angular/core';
 import { UserDataService } from '../../user-data.service';
 import { trigger, transition, style, animate } from '@angular/animations';
@@ -30,9 +31,15 @@ import { trigger, transition, style, animate } from '@angular/animations';
 export class ResumePage implements OnInit {
 
 
-  constructor(public user: UserDataService) { }
+  constructor(public user: UserDataService, private seo: SeoService) { }
 
   ngOnInit() {
+    this.seo.generateTags({
+      title: 'Résumé',
+      description: 'have a look at my résumé.',
+      slug: 'resume'
+    });
+    this.seo.setTitle('Gary Großgarten - Résumé');
   }
 
   open(url) {

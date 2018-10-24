@@ -13,13 +13,13 @@
     <div>
       <ion-chip [ngClass]="{'selected': user.githubUser && selectedLogin === user.githubUser?.login}" (click)="select(user.githubUser?.login)">
         <ion-avatar>
-          <img [src]="user.githubUser?.avatar_url">
+          <img [src]="user.githubUser?.avatar_url" alt="personal">
         </ion-avatar>
         <ion-label>{{user.githubUser?.login}}</ion-label>
       </ion-chip>
       <ion-chip [ngClass]="{'selected': selectedLogin === org.login}" *ngFor="let org of user.orgs" (click)="select(org.login)">
         <ion-avatar>
-          <img [src]="org.avatar_url">
+          <img [src]="org.avatar_url" [alt]="org.login">
         </ion-avatar>
         <ion-label>{{org.login}}</ion-label>
       </ion-chip>
