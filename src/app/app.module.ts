@@ -16,6 +16,8 @@ import { MarkdownModule } from 'ngx-markdown';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { SeoService } from './seo.service';
+import { NgxContentLoadingModule } from 'ngx-content-loading';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -25,6 +27,7 @@ import { SeoService } from './seo.service';
     IonicModule.forRoot({ mode: 'md' }),
     AppRoutingModule,
     FivethreeCoreModule,
+    NgxContentLoadingModule,
     HttpClientModule,
     MarkdownModule.forRoot({ loader: HttpClient }),
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })],
