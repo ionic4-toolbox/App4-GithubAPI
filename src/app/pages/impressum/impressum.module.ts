@@ -8,6 +8,7 @@ import { IonicModule } from '@ionic/angular';
 import { ImpressumPage } from './impressum.page';
 import { FivethreeCoreModule } from '@fivethree/core';
 import { MarkdownModule } from 'ngx-markdown';
+import { TranslateModule } from '@ngx-translate/core';
 
 const routes: Routes = [
   {
@@ -23,7 +24,8 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes),
     FivethreeCoreModule,
-    MarkdownModule.forChild()
+    MarkdownModule.forChild(),
+    TranslateModule.forChild()
   ],
   declarations: [ImpressumPage]
 })

@@ -1,5 +1,5 @@
 import { SeoService } from './../../seo.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { UserDataService } from '../../user-data.service';
 import { trigger, transition, style, animate } from '@angular/animations';
 

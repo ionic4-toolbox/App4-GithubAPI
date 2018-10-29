@@ -7,7 +7,7 @@
         </ion-toolbar>
       </ion-header>
       <ion-content padding>
-          <!-- <ngx-content-loading *ngIf="!user.githubUser"
+        <!-- <ngx-content-loading *ngIf="!user.githubUser"
           [speed]="'1000ms'"
           [width]="300"
           [height]="400"
@@ -20,7 +20,9 @@
             <svg:g ngx-rect width="96" height="10" y="240" x="16" rx="5" ry="5"></svg:g>
             <svg:g ngx-rect width="108" height="10" y="272" x="16" rx="5" ry="5"></svg:g>
         </ngx-content-loading> -->
-        <h1>{{user.githubUser?.name}}</h1>
+        <h1> 
+          <!-- <img src="assets/logo.png"> -->
+          {{user.githubUser?.name}}</h1>
         <p>{{user.githubUser?.bio}}</p>
         <ion-list lines="none">
           <ion-item (click)="open(contact.link)" *ngFor="let contact of user.config?.contact">
@@ -36,14 +38,14 @@
         <fiv-router-item [shape]="'dot'" [position]="'left'" [pageUrl]="'/resume'">
           <fiv-ripple [hover]="true" (click)="menu.close()">
             <ion-item lines="none">
-              <ion-label>Résumé</ion-label>
+              <ion-label><span translate>RESUME</span></ion-label>
             </ion-item>
           </fiv-ripple>
         </fiv-router-item>
         <fiv-router-item [shape]="'dot'" [position]="'left'" [pageUrl]="'/projects'">
           <fiv-ripple [hover]="true" (click)="menu.close()">
             <ion-item lines="none">
-              <ion-label>Projects</ion-label>
+              <ion-label><span translate>PROJECTS</span></ion-label>
             </ion-item>
           </fiv-ripple>
         </fiv-router-item>
@@ -53,7 +55,7 @@
         <ion-toolbar color="translucent">
           <ion-buttons slot="start">
             <ion-button href="imprint" (click)="menu.close()">
-              imprint
+                <span translate>IMPRINT</span>
             </ion-button>
           </ion-buttons>
         </ion-toolbar>

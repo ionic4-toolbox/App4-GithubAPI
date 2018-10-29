@@ -17,6 +17,9 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { SeoService } from './seo.service';
 import { NgxContentLoadingModule } from 'ngx-content-loading';
+import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+
 
 
 @NgModule({
@@ -29,6 +32,13 @@ import { NgxContentLoadingModule } from 'ngx-content-loading';
     FivethreeCoreModule,
     NgxContentLoadingModule,
     HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+          provide: TranslateLoader,
+          useFactory: HttpLoaderFactory,
+          deps: [HttpClient]
+      }
+  }),
     MarkdownModule.forRoot({ loader: HttpClient }),
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })],
   providers: [
@@ -40,4 +50,9 @@ import { NgxContentLoadingModule } from 'ngx-content-loading';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}

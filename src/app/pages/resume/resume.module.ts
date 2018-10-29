@@ -8,6 +8,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { ResumePage } from './resume.page';
 import { MarkdownModule } from 'ngx-markdown';
+import { TranslateModule } from '@ngx-translate/core';
 
 const routes: Routes = [
   {
@@ -23,7 +24,8 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes),
     MarkdownModule.forChild(),
-    FivethreeCoreModule
+    FivethreeCoreModule,
+    TranslateModule.forChild()
   ],
   declarations: [ResumePage]
 })

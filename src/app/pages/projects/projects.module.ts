@@ -8,6 +8,7 @@ import { IonicModule } from '@ionic/angular';
 import { ProjectsPage } from './projects.page';
 import { ProjectFilterPipe } from '../../pipes/project-filter.pipe';
 import { PipesModule } from '../../pipes/pipes.module';
+import { TranslateModule } from '@ngx-translate/core';
 
 const routes: Routes = [
   {
@@ -22,7 +23,8 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes),
-    PipesModule
+    PipesModule,
+    TranslateModule.forChild()
   ],
   declarations: [ProjectsPage]
 })
